@@ -16,7 +16,7 @@ variables:
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
 
-pool: ShoppingPool
+pool: CloudfestPool
 
 stages:
 - stage: Build
@@ -24,7 +24,7 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool: ShoppingPool
+    pool: CloudfestPool
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
