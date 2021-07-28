@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '3eb5d2d9-645c-45e1-9e7c-df2b983fbdbd'
   imageRepository: 'sandeepjainrundevops'
   containerRegistry: 'shoppingacrcicd.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Shopping/Shopping.API/Dockerfile'
+  dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
 
 pool: ShoppingPool
@@ -33,5 +33,6 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
+        buildContext: $(Build.SourcesDirectory)/Shopping
         tags: |
           $(tag)
