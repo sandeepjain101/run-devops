@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'c564d5df-c0fa-49ae-9f96-11d07dcd1a9f'
   imageRepository: 'sandeepjainrundevops'
   containerRegistry: 'shoppingacrcicd.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Shopping/Shopping.API/Dockerfile'
+  dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
