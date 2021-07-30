@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shoppingclient
-          image: shoppingacrcicd.azurecr.io/shoppingclient:$(Build.BuildId)
+          image: shoppingacrdemo.azurecr.io/shoppingclient:v2
           imagePullPolicy: IfNotPresent          
           ports:
             - containerPort: 80
@@ -36,7 +36,7 @@ spec:
               memory: "128Mi"
               cpu: "0.3"
       imagePullSecrets:
-        - name: shoppingacrcicdbbdd-auth
+        - name: acr-secret
 ---
 apiVersion: v1
 kind: Service
