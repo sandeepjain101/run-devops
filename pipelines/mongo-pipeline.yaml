@@ -28,10 +28,20 @@ variables:
 
 
 stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - upload: aks
+      artifact: aks
 
 - stage: Deploy
   displayName: Deploy stage
-
+  dependsOn: Build
   jobs:
   - deployment: Deploy
     displayName: Deploy
