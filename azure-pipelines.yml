@@ -54,7 +54,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'shoppingapi.default'
+    environment: 'sandeepjain101rundevops.default'
     strategy:
       runOnce:
         deploy:
