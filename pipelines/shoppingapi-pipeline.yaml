@@ -21,7 +21,7 @@ variables:
   imageRepository: 'shoppingapi'
   containerRegistry: 'shoppingacrcicd.azurecr.io'
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
-  tag: 'v1'
+  tag: '$(Build.BuildId)'
   imagePullSecret: 'shoppingacrcicdbbdd-auth'
 
   # Agent VM image name
