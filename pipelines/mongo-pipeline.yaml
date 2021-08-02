@@ -46,7 +46,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'sandeepjain101rundevops.default'
+    environment: 'sandeepjain101rundevops-8318.default'
     strategy:
       runOnce:
         deploy:
