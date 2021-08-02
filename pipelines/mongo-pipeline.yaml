@@ -57,7 +57,7 @@ stages:
               action: deploy
               manifests: |
                 $(Pipeline.Workspace)/aks/mongo-secret.yaml
-                $(Pipeline.Workspace)/aks/mongoconfigmap.yaml
+                $(Pipeline.Workspace)/aks/mongo-configmap.yaml
                 $(Pipeline.Workspace)/aks/mongo.yaml
               imagePullSecrets: |
                 mongo-secret
