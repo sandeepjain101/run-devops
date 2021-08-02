@@ -17,11 +17,11 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '783691c2-d0b6-4f99-af10-f535f5adecf1'
+  dockerRegistryServiceConnection: 'a70e631a-0ed1-4526-ab81-b2c228e83797'
   imageRepository: 'mongoimage'
-  containerRegistry: 'shoppingacrcicd.azurecr.io'
+  containerRegistry: 'shoppingcicdacr.azurecr.io'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'shoppingacrcicdbbdd-auth'
+  imagePullSecret: 'shoppingcicdacr20529c01-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -57,6 +57,8 @@ stages:
             inputs:
               action: deploy
               manifests: |
+                $(Pipeline.Workspace)/aks/mongo-secret.yaml
+                $(Pipeline.Workspace)/aks/mongoconfigmap.yaml
                 $(Pipeline.Workspace)/aks/mongo.yaml
               imagePullSecrets: |
                 mongo-secret
