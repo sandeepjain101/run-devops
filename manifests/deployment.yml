@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sandeepjainrundevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sandeepjainrundevops
+  template:
+    metadata:
+      labels:
+        app: sandeepjainrundevops 
+    spec:
+      containers:
+        - name: sandeepjainrundevops 
+          image: shoppingcicdacr.azurecr.io/sandeepjainrundevops
+          ports:
+          - containerPort: 80
