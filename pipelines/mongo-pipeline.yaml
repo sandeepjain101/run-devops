@@ -16,11 +16,11 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '37762535-50c5-4c45-9f15-b29361c09abf'
+  dockerRegistryServiceConnection: 'c6a073b5-1102-4291-9549-3f3c2dd35a58'
   imageRepository: 'mongoimage'
-  containerRegistry: 'shoppingacrnew.azurecr.io'
+  containerRegistry: 'shoppingacrfinal.azurecr.io'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'shoppingacrnew989f-auth'
+  imagePullSecret: 'shoppingacrfinaldbed-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
