@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shoppingapi
-          image: shoppingacrcicd.azurecr.io/shoppingapi:$(Build.BuildId)
+          image: shoppingcicdacr.azurecr.io/shoppingapi:$(Build.BuildId)
           imagePullPolicy: IfNotPresent          
           ports:
             - containerPort: 80
@@ -36,7 +36,7 @@ spec:
               memory: "128Mi"
               cpu: "0.3"
       imagePullSecrets:
-        - name: shoppingacrcicdbbdd-auth
+        - name: shoppingcicdacr20529c01-auth
 ---
 apiVersion: v1
 kind: Service
