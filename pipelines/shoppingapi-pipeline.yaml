@@ -17,12 +17,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'a70e631a-0ed1-4526-ab81-b2c228e83797'
+  dockerRegistryServiceConnection: '3b7d26d6-c22d-4202-8996-36e781fc01e9'
   imageRepository: 'shoppingapi'
   containerRegistry: 'shoppingcicdacr.azurecr.io'
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'shoppingcicdacr20529c01-auth'
+  imagePullSecret: 'shoppingcicdacr4715-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
