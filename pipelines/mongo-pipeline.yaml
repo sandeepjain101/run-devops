@@ -9,7 +9,6 @@ trigger:
     paths:
       include:
       - pipelines/mongo-pipeline.yaml
-      - aks/shoppingclient.yaml
 
 resources:
 - repo: self
@@ -17,11 +16,11 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'a70e631a-0ed1-4526-ab81-b2c228e83797'
+  dockerRegistryServiceConnection: '37762535-50c5-4c45-9f15-b29361c09abf'
   imageRepository: 'mongoimage'
-  containerRegistry: 'shoppingcicdacr.azurecr.io'
+  containerRegistry: 'shoppingacrnew.azurecr.io'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'shoppingcicdacr20529c01-auth'
+  imagePullSecret: 'shoppingacrnew989f-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
